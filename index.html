@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="description" content="Мы поможем не думать о ценообразовании и развитии новых групп товаров, взяв на себя рутину по отслеживанию остатков, цен, мониторингу поставщиков и добавлению новых товаров.">
+	<meta name="keywords" content="обновление, добавление, мониторинг, цены, товары">
+	<meta name="robots" content="all" >
+	<!-- css -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/jpg" href="img/favicon.jpg">
+	<title>PRICEGID - сервис обновления цен и наличия</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="popup-form" class="popup popup-form zoom-anim-dialog mfp-hide">
+			<form autocomplete="off" action="mail.php" method="POST">
+				<div class="form__thanks">
+					<p>Спасибо!<br><span>Мы скоро с Вами свяжемся</span></p>
+				</div>
+				<div class="form__content-wrapper">
+					<h3>Оставьте заявку</h3>
+					<p>Заполните данные о себе</p>
+						<input name="fromWhere" type="text" class="data-input" value="Запрос с главной">
+					<div class="input-wrap">
+						<input name="name" type="text" data-required placeholder="Имя*">
+						<span>Введите имя</span>
+					</div>
+					<div class="input-wrap">
+						<input name="phone" type="tel" data-required placeholder="Телефон*">
+						<span>Введите телефон</span>
+					</div>
+					<div class="input-wrap">
+						<input name="email" type="text" data-required placeholder="Email*">
+						<span>Введите email</span>
+					</div>
+					<label for="form-select-1">Где удобно общаться?</label>
+					<div class="input-wrap">
+						<select name="commWay" data-required id="form-select-1">
+						<option value="">Не выбрано*</option>
+						<option value="telegram">Telegram</option>
+						<option value="whatsApp">WhatsApp</option>
+						<option value="viber">Viber</option>
+						<option value="skype">Skype</option>
+						<option value="телефонный разговор">Телефонный разговор</option>
+					</select>
+					<span>Выберите один из вариантов</span>
+					</div>
+					<button type="submit">Отправить заявку</button>
+					<p>Вы даёте согласие на обработку персональных данных и соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+				</div>
+			</form>
+		</div>
+		<div id="popup-form-free" class="popup popup-form zoom-anim-dialog mfp-hide">
+			<form autocomplete="off" action="mail.php" method="POST">
+				<div class="form__thanks">
+					<p>Спасибо!<br><span>Мы скоро с Вами свяжемся</span></p>
+				</div>
+				<div class="form__content-wrapper">
+					<h3>Оставьте заявку</h3>
+					<p>Заполните данные о себе</p>
+					<input name="fromWhere" type="text" class="data-input" value="Запрос на тестовый период">
+					<div class="input-wrap">
+						<input name="name" type="text" data-required placeholder="Имя*">
+						<span>Введите имя</span>
+					</div>
+					<div class="input-wrap">
+						<input name="phone" type="tel" data-required placeholder="Телефон*">
+						<span>Введите телефон</span>
+					</div>
+					<div class="input-wrap">
+						<input name="email" type="text" data-required placeholder="Email*">
+						<span>Введите email</span>
+					</div>
+					<label for="form-select-2">Где удобно общаться?</label>
+					<div class="input-wrap">
+						<select name="commWay" data-required id="form-select-2">
+							<option value="">Не выбрано*</option>
+							<option value="telegram">Telegram</option>
+							<option value="whatsApp">WhatsApp</option>
+							<option value="viber">Viber</option>
+							<option value="skype">Skype</option>
+							<option value="телефонный разговор">Телефонный разговор</option>
+						</select>
+						<span>Выберите один из вариантов</span>
+					</div>
+					<button type="submit">Отправить заявку</button>
+					<p>Вы даёте согласие на обработку персональных данных и соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+				</div>
+			</form>
+		</div>
+		<div id="popup-form-tarrif" class="popup popup-tarrif zoom-anim-dialog mfp-hide">
+			<form autocomplete="off" action="mail.php" method="POST">
+				<div class="form__thanks">
+					<p>Спасибо!<br><span>Мы скоро с Вами свяжемся</span></p>
+				</div>
+				<div class="form__content-wrapper">
+					<input name="fromWhere" type="text" class="data-input" value="Заказ">
+					<input name="tarrif" type="text" class="popup-tarrif__tarrif-input">
+					<h3> </h3>
+					<p class="popup-tarrif-include">В тариф входит:</p>
+					<p class="popup-tarrif-include-item"></p>
+					<p class="popup-tarrif-include-item"></p>
+					<p class="popup-tarrif-include-item"></p>
+					<p class="popup-tarrif-include-item"></p>
+					<p class="popup-tarrif-price"></p>
+					<div class="input-wrap">
+						<input name="name" type="text" data-required placeholder="Имя*">
+						<span>Введите имя</span>
+					</div>
+					<div class="input-wrap">
+						<input name="phone" type="tel" data-required placeholder="Телефон*">
+						<span>Введите телефон</span>
+					</div>
+					<div class="input-wrap">
+						<input name="email" type="text" data-required placeholder="Email*">
+						<span>Введите email</span>
+					</div>
+					<label for="form-select-3">Где удобно общаться?</label>
+					<div class="input-wrap">
+						<select name="commWay" data-required id="form-select-3">
+							<option value="">Не выбрано*</option>
+							<option value="telegram">Telegram</option>
+							<option value="whatsApp">WhatsApp</option>
+							<option value="viber">Viber</option>
+							<option value="skype">Skype</option>
+							<option value="телефонный разговор">Телефонный разговор</option>
+						</select>
+						<span>Выберете один из вариантов</span>
+					</div>
+					<div class="input-wrap">
+						<textarea name="comment" cols="30" rows="3" placeholder="Комментарий к заказу"></textarea>
+					</div>
+					<button type="submit">Заказать услугу</button>
+					<p>Вы даёте согласие на обработку персональных данных и соглашаетесь с <a href="">политикой конфиденциальности</a></p>
+				</div>
+			</form>
+		</div>
+		<div id="popup-form-review" class="popup popup-review zoom-anim-dialog mfp-hide">
+			<form autocomplete="off" action="mail.php" method="POST">
+				<div class="form__thanks">
+					<p>Спасибо за отзыв!<br><span>Нам важно Ваше мнение</span></p>
+				</div>
+				<div class="form__content-wrapper">
+					<h3>Оставьте отзыв</h3>
+					<p>Поделитесь своим впечатлением<br>о сотрудничестве с нами</p>
+					<input name="fromWhere" type="text" class="data-input" value="Отзыв">
+					<div class="input-wrap">
+						<input name="name" type="text" data-required placeholder="Имя*">
+						<span>Введите имя</span>
+					</div>
+					<div class="input-wrap">
+						<input name="company" type="text" data-required placeholder="Название компании*">
+						<span>Введите название компании</span>
+					</div>
+					<div class="input-wrap">
+						<textarea name="review" cols="30" rows="5" data-required placeholder="Текст отзыва*"></textarea>
+						<span>Заполните поле</span>
+					</div>
+					<button type="submit">Отправить отзыв</button>
+					<p>Вы даёте согласие на обработку персональных данных и соглашаетесь с <a href="">политикой конфиденциальности</a></p>
+				</div>
+			</form>
+		</div>
+		<div id="popup-online-pay" class="popup popup-online-pay zoom-anim-dialog mfp-hide">
+			<h3>Безналичный расчёт</h3>
+			<img src="img/online-pay-icon.svg" alt="">
+			<p>ИП Кошевой П.А.</p>
+			<p><span>ИНН: </span>910500001003 от 20.05.2014</p>
+			<p><span>ОГРНИП: </span>317910200001248 от 11.01.2011</p>
+			<p>Мы работаем по упрощённой  системе налогооблажения без НДС</p>
+			<p>Безналичный рассчет возможен только для компаний из России и Беларуси</p>
+			<a class="help-link" href="#">Скачать шаблон договора</a>
+		</div>
+		<div id="popup-yandex" class="popup popup-yandex zoom-anim-dialog mfp-hide">
+			<h3>Яндекс деньги</h3>
+			<img src="img/umoneyYandex-icon.svg" alt="">
+			<p>Номер кошелька Яндекс.Деньги</p>
+			<p><span>40012269260416</span></p>
+			<a class="help-link" href="#">Оплатить</a>
+		</div>
+		<div id="popup-mastercard" class="popup popup-mastercard zoom-anim-dialog mfp-hide">
+			<h3>MasterCard</h3>
+			<img src="img/mastercard-icon.svg" alt="">
+			<p>Номер карты MasterCard</p>
+			<p><span>5106 2180 3501 3234</span></p>
+		</div>
+		<div id="popup-privat" class="popup popup-privat zoom-anim-dialog mfp-hide">
+			<h3>Приват 24</h3>
+			<img src="img/privat24-icon.svg" alt="">
+			<p>Номер карты Приват 24</p>
+			<p><span>5168 7554 2027 8935</span></p>
+		</div>
+		<button class="up-btn"><img src="img/up-btn.svg" alt=""></button>
+		<button class="fixed-contacts-btn">
+			<span></span>
+			<span></span>
+		</button>
+		<div class="fixed-contacts">
+			<a href="https://t.me/pricegid" target="_blank"><img src="img/telegram.svg" alt=""><img src="img/telegram-help.svg" alt=""></a>
+			<a href="https://wa.me/+380939500555" target="_blank"><img src="img/whatsapp.svg" alt=""><img src="img/whatsapp-help.svg" alt=""></a>
+			<a href="viber://chat?number=+380939500555" target="_blank"><img src="img/viber.svg" alt=""><img src="img/viber-help.svg" alt=""></a>
+			<a href="skype:tesla_co?userinfo" target="_blank"><img src="img/skype.svg" alt=""><img src="img/skype-help.svg" alt=""></a>
+			<a href="mailto:info@pricegid.com"><img src="img/email.svg" alt=""><img src="img/email-help.svg" alt=""></a>
+		</div>
+		<div class="menu-mob-bg"></div>
+		<div class="menu-mob">
+			<div class="menu-mob__header">
+				<button class="burger-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<button class="log-in">Войти</button>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="info" class="active">О нас</a></li>
+					<li><a href="info">Наши услуги</a></li>
+					<li><a href="our-clients">Для кого</a></li>
+					<li><a href="how-it-works">Как работаем</a></li>
+					<li><a href="how-to-start">Как начать</a></li>
+					<li><a href="what-you-get">Что вы получите</a></li>
+					<li><a href="cms">Платформы</a></li>
+					<li><a href="tarrifs">Цены</a></li>
+					<li><a href="reviews">Отзывы</a></li>
+					<li><a href="contact-to-us">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="menu-mob__contacts">
+				<div class="menu-mob___phone">
+					<a href="tel:+74994541637">+7 (499) 454 16 37</a>
+					<a href="tel:+38044761341">+38 (044) 761 34 1</a>
+				</div>
+				<div class="menu-mob__email">
+					<a href="mailto:sales@webfixed.com">sales@webfixed.com</a>
+				</div>
+			</div>
+		</div>
+		<header class="fixed">
+			<div class="container header__container">
+				<div>
+					<a href="#"><img class="header__logo-img" src="img/logo.svg" alt="Pricegid сервис обновления цен и наличия"></a>
+					<p>Сервис обновления<br>цен и наличия</p>
+				</div>
+				<div>
+					<button class="log-in">Войти</button>
+					<button class="burger-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="info">Наши услуги</a></li>
+						<li><a href="our-clients">Для кого</a></li>
+						<li><a href="how-it-works">Как работаем</a></li>
+						<li><a href="how-to-start">Как начать</a></li>
+						<li><a href="tarrifs">Цены</a></li>
+						<li><a href="reviews">Отзывы</a></li>
+						<li><a href="contact-to-us">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<header>
+			<div class="container header__container">
+				<div>
+					<a href="#"><img class="header__logo-img" src="img/logo.svg" alt="Pricegid сервис обновления цен и наличия"></a>
+					<p>Сервис обновления<br>цен и наличия</p>
+				</div>
+				<div>
+					<button class="log-in">Войти</button>
+					<button class="burger-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="info">Наши услуги</a></li>
+						<li><a href="our-clients">Для кого</a></li>
+						<li><a href="how-it-works">Как работаем</a></li>
+						<li><a href="how-to-start">Как начать</a></li>
+						<li><a href="tarrifs">Цены</a></li>
+						<li><a href="reviews">Отзывы</a></li>
+						<li><a href="contact-to-us">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="first-screen">
+			<div class="container first-screen__container">
+				<div class="offer">
+					<div class="offer__text">
+						<h1>
+							Устали от <span>регулярного обновления цен</span> на сайте?
+						</h1>
+						<p>Мы поможем не думать о ценообразовании и развитии новых групп товаров, взяв на себя рутину по отслеживанию остатков, цен, мониторингу поставщиков и добавлению новых товаров.</p>
+						<a href="#popup-form" class="offer__btn popup-with-move-anim reset-form">Оставить заявку</a>
+						<div class="offer__btns-mob">
+							<a href="#popup-form" class="popup-with-move-anim reset-form">Связаться с нами</a>
+							<div class="offer__btns-mob-links">
+								<a href="https://t.me/pricegid" target="_blank"><img src="img/telegram.svg" alt=""></a>
+								<a href="https://wa.me/+380939500555" target="_blank"><img src="img/whatsapp.svg" alt=""></a>
+								<a href="viber://chat?number=+380939500555" target="_blank"><img src="img/viber.svg" alt=""></a>
+								<a href="skype:tesla_co?userinfo" target="_blank"><img src="img/skype.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="offer__img">
+						<img src="img/offer__img.svg" alt="Jтслеживаниt остатков, цен, мониторинг поставщиков и добавлениt новых товаров">
+					</div>
+				</div>
+				<div class="first-screen__contacts">
+					<p>Свяжитесь с нами для консультации:</p>
+						<a href="https://t.me/pricegid" target="_blank"><img src="img/telegram.svg" alt=""></a>
+						<a href="https://wa.me/+380939500555" target="_blank"><img src="img/whatsapp.svg" alt=""></a>
+						<a href="viber://chat?number=+380939500555" target="_blank"><img src="img/viber.svg" alt=""></a>
+						<a href="skype:tesla_co?userinfo" target="_blank"><img src="img/skype.svg" alt=""></a>
+				</div>
+				<div class="basic-services">
+					<div class="basic-services__item">
+						<img src="img/update-icon.svg" alt="обновление">
+						<h3>Обновление</h3>
+						<p>Ежедневная обработка цен и наличия товаров по Excel прайсам или сайтам поставщиков</p>
+					</div>
+					<div class="line"></div>
+					<div class="basic-services__item">
+						<img src="img/addition-icon.svg" alt="добавление">
+						<h3>Добавление</h3>
+						<p>Всегда оперативное добавление новых поступлений от поставщиков прямо к Вам на сайт</p>
+					</div>
+					<div class="line"></div>
+					<div class="basic-services__item">
+						<img src="img/monitoring-icon.svg" alt="мониторинг">
+						<h3>Мониторинг</h3>
+						<p>Тщательная и регулярная проверка цен у Ваших конкурентов на интересующие Вас товары </p>
+					</div>
+				</div>
+				<div class="basic-services-mob">
+					<div class="basic-services-mob__item">
+						<img src="img/update-icon.svg" alt="обновление">
+						<h3>Обновление</h3>
+						<p>Ежедневная обработка цен и наличия товаров по Excel прайсам или сайтам поставщиков</p>
+					</div>
+					<div class="basic-services-mob__item">
+						<img src="img/addition-icon.svg" alt="добавление">
+						<h3>Добавление</h3>
+						<p>Всегда оперативное добавление новых поступлений от поставщиков прямо к Вам на сайт</p>
+					</div>
+					<div class="basic-services-mob__item">
+						<img src="img/monitoring-icon.svg" alt="мониторинг">
+						<h3>Мониторинг</h3>
+						<p>Тщательная и регулярная проверка цен у Ваших конкурентов на интересующие Вас товары </p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="info">
+			<div class="container info__container">
+				<div class="about-company">
+					<div class="about-company__header">
+						<h2>О компании</h2>
+						<p>Хотите сэкономить не только время, но и деньги?</p>
+					</div>
+					<div class="about-company__text">
+						<p>
+							Наша компания предоставляет профессиональные услуги по обновлению цен и наличия на товары по сайтам или прайсам поставщиков, мониторинг цен конкурентов, а также, добавление новых товаров из различных сайтов-источников.
+						</p>
+						<p>
+							Вся однообразная работа, которая так утомляла Вас каждый день, может быть переложена на наши плечи! Мы сравниваем цены у Ваших поставщиков или конкурентов, после чего оперативно вносим изменения на Ваш сайт. Итог - довольные клиенты, которые всегда видят актуальную информацию на Вашем сайте.
+						</p>
+					</div>
+				</div>
+				<div class="our-offers">
+					<div class="our-offers__header">
+						<h2>Что мы предлагаем</h2>
+					</div>
+					<div class="our-offers__items">
+						<ul>
+							<li>
+								<p class="special-p">Комплексное ведение всего ассортимента Вашего интернет-магазина</p>
+							</li>
+							<li>
+								<p class="special-p">Расширение ассортимента, добавление новых поставщиков и групп товаров</p>
+							</li>
+							<li>
+								<p class="special-p">Ежедневный анализ товаров по различным сайтам конкурентов</p>
+							</li>
+							<li>
+								<p class="special-p">Ежедневное обновление цен и наличия товаров по поставщикам</p>
+							</li>
+							<li>
+								<p class="special-p">Внесение актуальной информации на сайт, обновление цен и каталога</p>
+							</li>
+							<li>
+								<p class="special-p">Сравнение и обновление цен по маркетплейсам: e-katalog, onliner и т.д.</p>
+							</li>
+							<li>
+								<p class="special-p">Добавление новых поступлений от поставщиков в кратчайшие сроки</p>
+							</li>
+							<li>
+								<p class="special-p">Добавление новых поступлений от поставщиков в кратчайшие сроки</p>
+							</li>
+							<li>
+								<p class="special-p">Выполнение рутинных задач, монотонных и цикличных действий</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="our-clients">
+			<div class="container our-clients__container">
+				<div class="our-clients__header">
+					<h2>Кто наши клиенты</h2>
+					<p class="special-p">Цель у всех одна — актуализация каталога для роста продаж.</p>
+				</div>
+				<div class="our-clients__items">
+					<div class="online-stores">
+						<img src="img/online-store-icon.svg" alt="">
+						<div>
+							<h3>Интернет магазины</h3>
+							<p class="special-p">Переоценка товаров с учетом цен поставщиков или конкурентов</p>
+						</div>
+					</div>
+					<div class="manufactures">
+						<img src="img/manufactures-icon.svg" alt="">
+						<div>
+							<h3>Производители</h3>
+							<p class="special-p">Анализ и работа с демпингом, контроль соблюдения рекомендованых цен</p>
+						</div>
+					</div>
+					<div class="suppliers">
+						<img src="img/suppliers-icon.svg" alt="">
+						<div>
+							<h3>Поставщики</h3>
+							<p class="special-p">Мониторинг цен конкурентов и формирования итогов анализа</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="how-it-works">
+			<div class="container how-it-works__container">
+				<div class="how-it-works__header">
+					<h2>Как это работает</h2>
+					<p>
+						Мы - команда профессионалов, которая возьмет на себя рутинные задачи по ведению каталога товаров вашего интернет-магазина.
+					</p>
+				</div>
+				<div class="how-it-works__body">
+					<div class="how-it-works__tabs">
+						<button class="how-it-works__tab active">
+							<span>01.</span> <span>Список источников</span>
+						</button>
+						<button class="how-it-works__tab">
+							<span>02.</span> <span>Задание на обновление</span>
+						</button>
+						<button class="how-it-works__tab">
+							<span>03.</span> <span>Обработка данных</span>
+						</button>
+						<button class="how-it-works__tab">
+							<span>04.</span> <span>Обновление товаров</span>
+						</button>
+						<button class="how-it-works__tab">
+							<span>05.</span> <span>Добавление новинок</span>
+						</button>
+					</div>
+					<div class="how-it-works__content">
+						<div class="how-it-works__content-img">
+							<h3 class="how-it-works__content-item-header active">Список источников</h3>
+							<h3 class="how-it-works__content-item-header">Задание на обновление</h3>
+							<h3 class="how-it-works__content-item-header">Обработка данных</h3>
+							<h3 class="how-it-works__content-item-header">Обновление товаров</h3>
+							<h3 class="how-it-works__content-item-header">Добавление новинок</h3>
+							<img src="img/sources-list.svg" alt="" class="how-it-works__content-item-img active">
+							<img src="img/update-task.svg" alt="" class="how-it-works__content-item-img">
+							<img src="img/data-processing.svg" alt="" class="how-it-works__content-item-img">
+							<img src="img/goods-update.svg" alt="" class="how-it-works__content-item-img">
+							<img src="img/addition-news.svg" alt="" class="how-it-works__content-item-img">
+						</div>
+						<div class="how-it-works__content-text">
+							<div class="how-it-works__content-item-text active">
+								<p>
+									Для начала работы потребуется составить список источников с интересующими вас товарами или услугами. Это могут быть сайты-поставщики, сайты-конкуренты или же обычные прайс-листы в любом формате (csv, excel, xml, api, yml и тд).
+								</p>
+								<p>
+									Также источниками могут служить различные торговые площадки и маркетплейсы, такие как Яндекс Маркет, e-Katalog, Onliner и другие.
+								</p>
+							</div>
+							<div class="how-it-works__content-item-text">
+								<p>
+									По каждому источнику вкратце опишите что нужно делать: обрабатывать все товары данного сайта; отдельные группы товаров; определенные бренды и т.д. Укажите, также, требуется ли калькулировать цену или же оставлять её без изменений.
+								</p>
+								<p>
+									Наши специалисты имеют возможность собирать любые данные которые Вам будут нужны для последующего ценового мониторинга и/или импорта на ваш сайт.
+								</p>
+							</div>
+							<div class="how-it-works__content-item-text">
+								<p>
+									Далее наши специалисты приступают к обработке данных по ранее полученному заданию. В процессе работы производится сбор и анализ информации о товарах с каждого источника.
+								</p>
+								<p>
+									По завершению работ, предоставляется готовый файл в удобном для Вас формате (excel, csv, xml). Результат идет в файл, а потом к Вам на сайт.
+								</p>
+							</div>
+							<div class="how-it-works__content-item-text">
+								<p>
+									После обработки всех источников, вносим изменения в товарах Вашего сайта, на основании полученного файла с актуальными ценами и обработанных ранее данных, с нужной для Вас периодичностью. Дополнительно предоставляется постоянный онлайн доступ к файлу обновления.
+								</p>
+								<p>
+									Предусмотрен режим “бесключевого доступа” - передачи итогового файла со свежими ценами, напрямую заказчику, без доступа к его сайту.
+								</p>
+							</div>
+							<div class="how-it-works__content-item-text">
+								<p>
+									При обнаружении новых товаров у поставщиков, в краткие сроки добавляем их к Вам на сайт. Добавление происходит посредством загрузки csv файла с товарами, ранее собранными из выбранных Вами источников.
+								</p>
+								<p>
+									Качество товаров, напрямую зависит от качества контента на подобранном Вами источнике.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="cms">
+			<div class="container cms__container">
+				<div class="cms__header">
+					<h2>CMS и платформы</h2>
+				</div>
+				<div class="cms__slider">
+					<div class="cms__slider-item"><img src="img/1cBitrix.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/okaycms.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/wordpress.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/amirocms.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/joomla.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/insales.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/webasyst.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/diafan.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/opencart.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/woo.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/ocstore.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/simpla.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/prestashop.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/imagecms.svg" alt="">	</div>	
+					<div class="cms__slider-item"><img src="img/megagroup.svg" alt=""></div>
+					<div class="cms__slider-item"><img src="img/magento.svg" alt=""></div>
+				</div>
+			</div>
+		</section>
+		<section class="what-you-get">
+			<div class="container what-you-get__container">
+				<div class="what-you-get__header">
+					<h2>Что вы получаете в результате</h2>
+				</div>
+				<div class="what-you-get__items">
+					<div class="actual-prices">
+						<img src="img/laptop-icon.svg" alt="">
+						<div>
+							<p class="special-p">
+								Актуальные наличие и цены на товары Вашего интернет-магазина
+							</p>
+						</div>
+					</div>
+					<div class="new-receipts">
+						<img src="img/new-receipts-icon.svg" alt="">
+						<div>
+							<p class="special-p">
+								Новые поступления от поставщиков у Вас на сайте
+							</p>
+						</div>
+					</div>
+					<div class="staff-eff">
+						<img src="img/staff-eff-icon.svg" alt="">
+						<div>
+							<p class="special-p">
+								Эффективность работы персонала и экономия ресурсов
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="how-to-start">
+			<div class="container how-to-start__container">
+				<div class="how-to-start__header">
+					<h2>Как начать</h2>
+					<p>Мы не любим усложнять процессы, поэтому работать с нами легко. От Вас потребуется лишь несколько простых шагов:</p>
+				</div>
+				<div class="how-to-start__body">
+					<div class="how-to-start__tabs">
+						<button class="how-to-start__tab active">Выбор тарифа</button>
+						<button class="how-to-start__tab">Подбор источников</button>
+						<button class="how-to-start__tab">Оформление заказа</button>
+						<button class="how-to-start__tab">Консультация с менеджером</button>
+					</div>
+					<div class="how-to-start__content">
+						<div class="how-to-start__content-item">
+							<div class="how-to-start__text">
+								<h3>Определитесь с источником цен и наличия для Ваших товаров.</h3>
+								<p>
+									Выберите самый подходящий для Вас тарифный план из всех предложенных на нашем сайте. Стоимость месячной подписки на наш сервис складывается из двух факторов: суммарное количество обновляемых товаров из всех выбранных вами источников и количество источников по которым нужно обновлять цены и наличия. Подробнее в разделе Тарифные планы.
+								</p>
+								<p>
+									В случае если у Вас нет информации о точном или примерном количестве товаров на источниках, свяжитесь с нами, любым удобным для вас способом, наши специалисты в кратчайшие сроки сделаю просчёт каждого запрошенного сайта.
+								</p>
+							</div>
+							<div class="how-to-start__img">
+								<img src="img/sources-selection.svg" alt="">
+							</div>
+						</div>
+						<div class="how-to-start__content-item">
+							<div class="how-to-start__text">
+								<h3>Определитесь с источником цен и наличия для Ваших товаров.</h3>
+								<p>
+									Выберите самый подходящий для Вас тарифный план из всех предложенных на нашем сайте. Стоимость месячной подписки на наш сервис складывается из двух факторов: суммарное количество обновляемых товаров из всех выбранных вами источников и количество источников по которым нужно обновлять цены и наличия. Подробнее в разделе Тарифные планы.
+								</p>
+								<p>
+									В случае если у Вас нет информации о точном или примерном количестве товаров на источниках, свяжитесь с нами, любым удобным для вас способом, наши специалисты в кратчайшие сроки сделаю просчёт каждого запрошенного сайта.
+								</p>
+							</div>
+							<div class="how-to-start__img">
+								<img src="img/addition-news.svg" alt="">
+							</div>
+						</div>
+						<div class="how-to-start__content-item">
+							<div class="how-to-start__text">
+								<h3>Определитесь с источником цен и наличия для Ваших товаров.</h3>
+								<p>
+									Выберите самый подходящий для Вас тарифный план из всех предложенных на нашем сайте. Стоимость месячной подписки на наш сервис складывается из двух факторов: суммарное количество обновляемых товаров из всех выбранных вами источников и количество источников по которым нужно обновлять цены и наличия. Подробнее в разделе Тарифные планы.
+								</p>
+								<p>
+									В случае если у Вас нет информации о точном или примерном количестве товаров на источниках, свяжитесь с нами, любым удобным для вас способом, наши специалисты в кратчайшие сроки сделаю просчёт каждого запрошенного сайта.
+								</p>
+							</div>
+							<div class="how-to-start__img">
+								<img src="img/sources-selection.svg" alt="">
+							</div>
+						</div>
+						<div class="how-to-start__content-item">
+							<div class="how-to-start__text">
+								<h3>Определитесь с источником цен и наличия для Ваших товаров.</h3>
+								<p>
+									Выберите самый подходящий для Вас тарифный план из всех предложенных на нашем сайте. Стоимость месячной подписки на наш сервис складывается из двух факторов: суммарное количество обновляемых товаров из всех выбранных вами источников и количество источников по которым нужно обновлять цены и наличия. Подробнее в разделе Тарифные планы.
+								</p>
+								<p>
+									В случае если у Вас нет информации о точном или примерном количестве товаров на источниках, свяжитесь с нами, любым удобным для вас способом, наши специалисты в кратчайшие сроки сделаю просчёт каждого запрошенного сайта.
+								</p>
+							</div>
+							<div class="how-to-start__img">
+								<img src="img/addition-news.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="how-to-start__btns">
+						<div class="how-to-start__slider-btns">
+							<button class="slider-btn-prev">
+								<span></span>
+								<span></span>
+							</button>
+							<div class="current-slide">1<span>/4</span></div>
+							<button class="slider-btn-next">
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<a href="#popup-form-free" class="how-to-start__try-btn popup-with-move-anim reset-form">Попробовать бесплатно</a>
+					</div>
+				</div>
+				<div class="how-to-start__body-mob">
+					<button class="how-to-start__tab-mob">Выбор тарифа</button>
+					<div class="how-to-start__content-item-mob">
+						<div class="how-to-start__content-text-mob">
+							<h3>Определитесь с источником цен и наличия для Ваших товаров.</h3>
+							<p>
+								Выберите самый подходящий для Вас тарифный план из всех предложенных на нашем сайте. Стоимость месячной подписки на наш сервис складывается из двух факторов: суммарное количество обновляемых товаров из всех выбранных вами источников и количество источников по которым нужно обновлять цены и наличия. Подробнее в разделе Тарифные планы.
+							</p>
+							<p>
+								В случае если у Вас нет информации о точном или примерном количестве товаров на источниках, свяжитесь с нами, любым удобным для вас способом, наши специалисты в кратчайшие сроки сделаю просчёт каждого запрошенного сайта.
+							</p>
+						</div>
+					</div>
+					<button class="how-to-start__tab-mob">Подбор источников</button>
+					<div class="how-to-start__content-item-mob">
+						<div class="how-to-start__content-text-mob">
+							<h3>Определитесь с источником цен и наличия для Ваших товаров.</h3>
+							<p>
+								Выберите самый подходящий для Вас тарифный план из всех предложенных на нашем сайте. Стоимость месячной подписки на наш сервис складывается из двух факторов: суммарное количество обновляемых товаров из всех выбранных вами источников и количество источников по которым нужно обновлять цены и наличия. Подробнее в разделе Тарифные планы.
+							</p>
+							<p>
+								В случае если у Вас нет информации о точном или примерном количестве товаров на источниках, свяжитесь с нами, любым удобным для вас способом, наши специалисты в кратчайшие сроки сделаю просчёт каждого запрошенного сайта.
+							</p>
+						</div>
+					</div>
+					<button class="how-to-start__tab-mob">Оформление заказа</button>
+					<div class="how-to-start__content-item-mob">
+						<div class="how-to-start__content-text-mob">
+							<h3>Определитесь с источником цен и наличия для Ваших товаров.</h3>
+							<p>
+								Выберите самый подходящий для Вас тарифный план из всех предложенных на нашем сайте. Стоимость месячной подписки на наш сервис складывается из двух факторов: суммарное количество обновляемых товаров из всех выбранных вами источников и количество источников по которым нужно обновлять цены и наличия. Подробнее в разделе Тарифные планы.
+							</p>
+							<p>
+								В случае если у Вас нет информации о точном или примерном количестве товаров на источниках, свяжитесь с нами, любым удобным для вас способом, наши специалисты в кратчайшие сроки сделаю просчёт каждого запрошенного сайта.
+							</p>
+						</div>
+					</div>
+					<button class="how-to-start__tab-mob">Консультация с менеджером</button>
+					<div class="how-to-start__content-item-mob">
+						<div class="how-to-start__content-text-mob">
+							<h3>Определитесь с источником цен и наличия для Ваших товаров.</h3>
+							<p>
+								Выберите самый подходящий для Вас тарифный план из всех предложенных на нашем сайте. Стоимость месячной подписки на наш сервис складывается из двух факторов: суммарное количество обновляемых товаров из всех выбранных вами источников и количество источников по которым нужно обновлять цены и наличия. Подробнее в разделе Тарифные планы.
+							</p>
+							<p>
+								В случае если у Вас нет информации о точном или примерном количестве товаров на источниках, свяжитесь с нами, любым удобным для вас способом, наши специалисты в кратчайшие сроки сделаю просчёт каждого запрошенного сайта.
+							</p>
+						</div>
+					</div>
+					<a href="#popup-form-free" class="how-to-start__try-btn popup-with-move-anim reset-form">Попробовать бесплатно</a>
+				</div>
+			</div>
+		</section>
+		<section class="tarrifs">
+			<div class="container tarrifs__container">
+				<div class="tarrifs__top">
+					<div class="tarrif__header">
+						<h2>Тарифные планы</h2>
+						<p>
+							Переоценка всех товаров  Вашего интернет-магазина с учётом цен поставщиков.
+						</p>
+					</div>
+					<div class="tarrifs__control">
+						<div class="tarrifs__tabs">
+							<button class="active">Обновление</button>
+							<button>Добавление</button>
+							<button>Мониторинг</button>
+						</div>
+						<div class="tarrifs__currency">
+							<button class="active" data-currency-value="1" data-currency-icon="₽">RUB</button>
+							<button data-currency-value="75" data-currency-icon="$">USD</button>
+							<button data-currency-value="28" data-currency-icon="Br">BYN</button>
+							<button data-currency-value="2.6" data-currency-icon="₴">UAH</button>
+						</div>
+					</div>
+				</div>
+				<div class="tarrifs__content">
+					<div class="tarrifs__content-item">
+						<div class="tarrifs__opportunities">
+							<p>Ежедневное обновление</p>
+							<p>Добавление новинок</p>
+							<p>Выгрузка в CVS файл</p>
+							<p>Интеграция с вашим сайтом</p>
+						</div>
+						<div class="tarrifs__sources-number">
+							<p>Количество источников:</p><span></span>
+							<div class="tarrifs__sources-number-btns">
+								<button class="active" data-sources-num="3" data-sources-rate="1">3 источника</button>
+								<button data-sources-num="10" data-sources-rate="2">10 источников</button>
+								<button data-sources-num="00" data-sources-rate="3">Неограниченно</button>
+							</div>
+							<p class="tarrifs__goods-num">Количество товаров:</p><span></span>
+						</div>
+						<div class="tarrifs__cards-slider">
+							<div class="tarrifs__cards">
+								<div class="tarrifs__card card-start">
+									<h3 class="card__header">Старт</h3>
+									<p class="card__price">2100 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>1 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima">
+									<h3 class="card__header">Оптима</h3>
+									<p class="card__price">2800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>2 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima-plus">
+									<h3 class="card__header">Оптима +</h3>
+									<p class="card__price">3500 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>5 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-ultra">
+									<h3 class="card__header">Ультра</h3>
+									<p class="card__price">4200 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>10 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+							</div>
+							<div class="tarrifs__cards">
+								<div class="tarrifs__card card-start">
+									<h3 class="card__header">Старт</h3>
+									<p class="card__price">2100 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>1 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima">
+									<h3 class="card__header">Оптима</h3>
+									<p class="card__price">2800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>2 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima-plus">
+									<h3 class="card__header">Оптима +</h3>
+									<p class="card__price">3500 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>5 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-ultra">
+									<h3 class="card__header">Ультра</h3>
+									<p class="card__price">4200 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>10 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+							</div>
+							<div class="tarrifs__cards">
+								<div class="tarrifs__card card-start">
+									<h3 class="card__header">Старт</h3>
+									<p class="card__price">2100 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>1 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima">
+									<h3 class="card__header">Оптима</h3>
+									<p class="card__price">2800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>2 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima-plus">
+									<h3 class="card__header">Оптима +</h3>
+									<p class="card__price">3500 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>5 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-ultra">
+									<h3 class="card__header">Ультра</h3>
+									<p class="card__price">4200 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>10 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tarrifs__content-item">
+						<div class="tarrifs__opportunities">
+							<p>Ежедневное обновление</p>
+							<p>Добавление новинок</p>
+							<p>Выгрузка в CVS файл</p>
+							<p>Интеграция с вашим сайтом</p>
+						</div>
+						<div class="tarrifs__sources-number">
+							<p>Количество источников:</p><span></span>
+							<div class="tarrifs__sources-number-btns">
+								<button class="active" data-sources-num="3" data-sources-rate="1">3 источника</button>
+								<button data-sources-num="10" data-sources-rate="2">10 источников</button>
+								<button data-sources-num="00" data-sources-rate="3">Неограниченно</button>
+							</div>
+							<p class="tarrifs__goods-num">Количество товаров:</p><span></span>
+						</div>
+						<div class="tarrifs__cards-slider">
+							<div class="tarrifs__cards">
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+							</div>
+							<div class="tarrifs__cards">
+								<div class="tarrifs__card card-start">
+									<h3 class="card__header">Старт</h3>
+									<p class="card__price">2100 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>1 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima">
+									<h3 class="card__header">Оптима</h3>
+									<p class="card__price">2800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>2 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima-plus">
+									<h3 class="card__header">Оптима +</h3>
+									<p class="card__price">3500 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>5 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-ultra">
+									<h3 class="card__header">Ультра</h3>
+									<p class="card__price">4200 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>10 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+							</div>
+							<div class="tarrifs__cards">
+								<div class="tarrifs__card card-start">
+									<h3 class="card__header">Старт</h3>
+									<p class="card__price">2100 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>1 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima">
+									<h3 class="card__header">Оптима</h3>
+									<p class="card__price">2800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>2 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima-plus">
+									<h3 class="card__header">Оптима +</h3>
+									<p class="card__price">3500 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>5 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-ultra">
+									<h3 class="card__header">Ультра</h3>
+									<p class="card__price">4200 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>10 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tarrifs__content-item">
+						<div class="tarrifs__opportunities">
+							<p>Ежедневное обновление</p>
+							<p>Добавление новинок</p>
+							<p>Выгрузка в CVS файл</p>
+							<p>Интеграция с вашим сайтом</p>
+						</div>
+						<div class="tarrifs__sources-number">
+							<p>Количество источников:</p><span></span>
+							<div class="tarrifs__sources-number-btns">
+								<button class="active" data-sources-num="3" data-sources-rate="1">3 источника</button>
+								<button data-sources-num="10" data-sources-rate="2">10 источников</button>
+								<button data-sources-num="00" data-sources-rate="3">Неограниченно</button>
+							</div>
+							<p class="tarrifs__goods-num">Количество товаров:</p><span></span>
+						</div>
+						<div class="tarrifs__cards-slider">
+							<div class="tarrifs__cards">
+								<div class="tarrifs__card card-start">
+									<h3 class="card__header">Старт</h3>
+									<p class="card__price">2100 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>1 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima">
+									<h3 class="card__header">Оптима</h3>
+									<p class="card__price">2800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>2 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima-plus">
+									<h3 class="card__header">Оптима +</h3>
+									<p class="card__price">3500 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>5 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-ultra">
+									<h3 class="card__header">Ультра</h3>
+									<p class="card__price">4200 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>10 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+							</div>
+							<div class="tarrifs__cards">
+								<div class="tarrifs__card card-start">
+									<h3 class="card__header">Старт</h3>
+									<p class="card__price">2100 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>1 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima">
+									<h3 class="card__header">Оптима</h3>
+									<p class="card__price">2800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>2 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima-plus">
+									<h3 class="card__header">Оптима +</h3>
+									<p class="card__price">3500 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>5 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-ultra">
+									<h3 class="card__header">Ультра</h3>
+									<p class="card__price">4200 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>10 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+							</div>
+							<div class="tarrifs__cards">
+								<div class="tarrifs__card card-start">
+									<h3 class="card__header">Старт</h3>
+									<p class="card__price">2100 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>1 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima">
+									<h3 class="card__header">Оптима</h3>
+									<p class="card__price">2800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>2 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-optima-plus">
+									<h3 class="card__header">Оптима +</h3>
+									<p class="card__price">3500 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>5 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-ultra">
+									<h3 class="card__header">Ультра</h3>
+									<p class="card__price">4200 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>10 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-mega">
+									<h3 class="card__header">Мега</h3>
+									<p class="card__price">5600 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>20 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi">
+									<h3 class="card__header">Профи</h3>
+									<p class="card__price">6300 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>50 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-profi-plus">
+									<h3 class="card__header">Профи +</h3>
+									<p class="card__price">7700 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>80 000</span> товаров</p>
+								</div>
+								<div class="tarrifs__card card-elite">
+									<h3 class="card__header">Элит</h3>
+									<p class="card__price">9800 <span>₽</span></p>
+									<p class="card__time">1 месяц</p>
+									<p class="card__sources" data-sources="0">3 источника</p>
+									<a href="#popup-form-tarrif" class="card__order reset-form popup-with-move-anim">Заказать</a>
+									<p class="card__goods-num"><span>100 000</span> товаров</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tarrifs__pay-ways">
+					<p>Способы оплаты:</p>
+					<a href="#popup-yandex" class="popup-with-move-anim"><img src="img/umoneyYandex-icon.svg" alt=""></a>
+					<a href="#popup-mastercard" class="popup-with-move-anim"><img src="img/visa-icon.svg" alt=""></a>
+					<a href="#popup-mastercard" class="popup-with-move-anim"><img src="img/mastercard-icon.svg" alt=""></a>
+					<a href="#popup-privat" class="popup-with-move-anim"><img src="img/privat24-icon.svg" alt=""></a>
+					<a href="#popup-online-pay" class="popup-with-move-anim"><img src="img/online-pay-icon.svg" alt=""></a>
+				</div>
+			</div>
+		</section>
+		<section class="why-we">
+			<div class="container why-we__container">
+				<h2>Почему мы</h2>
+				<div class="why-we__items">
+					<div class="why-we__item">
+						<img src="img/connection-cost.svg" alt="">
+						<h3>Стоимость подключения</h3>
+						<p>Цена подключения к сервису от 2100 руб в месяц</p>
+					</div>
+					<div class="why-we__item">
+						<img src="img/result-guarantee.svg" alt="">
+						<h3>Гарантия результата</h3>
+						<p>Составляется план работы и согласовывается с клиентом</p>
+					</div>
+					<div class="why-we__item">
+						<img src="img/experience.svg" alt="">
+						<h3>Опыт работы</h3>
+						<p>Успешно ведем различные интернет-проекты с 2014 года</p>
+					</div>
+					<div class="why-we__item">
+						<img src="img/processing-speed.svg" alt="">
+						<h3>Скорость обработки</h3>
+						<p>За сутки обновляется до полумиллиона товаров</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="subscribe">
+			<div class="container subscribe__container">
+				<div class="subscribe__header">
+					<h2>Подпишитесь на новости</h2>
+					<p>Подпишитесь и получайте эффективные советы о том, как экономить время, силы и деньги!</p>
+				</div>
+				<form autocomplete="off" action="mail.php" method="POST" class="subscribe__form">
+					<div class="form__thanks">
+						<p>Спасибо!<br><span>Теперь Вы подписаны на новости</span></p>
+					</div>
+					<div class="form__content-wrapper">
+						<input name="fromWhere" type="text" class="data-input" value="Подписка на новости">
+						<div class="input-wrap">
+							<input name="email" type="text" placeholder="Ваш e-mail" data-required>
+							<span>Введите email</span>
+						</div>
+						<button type="submit">Подписаться</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="reviews">
+			<div class="container reviews__container">
+				<div class="reviews__header-btns">
+					<div class="reviews__header">
+						<h2>Отзывы о нашем сервисе</h2>
+						<p>
+							Пользователи сервиса делятся своим опытом о сотрудничестве с нами.
+						</p>
+					</div>
+					<div class="reviews__btns">
+						<a href="#popup-form-review" class="reviews__send popup-with-move-anim reset-form">Оставить отзыв</a>
+						<div class="reviews__slider-btns">
+							<button class="slider-btn-prev">
+								<span></span>
+								<span></span>
+							</button>
+							<div class="current-slide"></div>
+							<button class="slider-btn-next">
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="reviews__slider">
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Максим Захожий</h3>
+								<p>Marketing director UAATEAM</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Заказываю услуги PriceGid уже не первый раз - надёжен, как щвейцарские часы. И в этот раз, так же не подвели. Вежливо, оперативно, своевременно. Всем рекомендую. Так держать!
+							</p>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Виталий Кравченко</h3>
+								<p>СУЩ Webline Promo</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Работаю с этой компанией не первый год. Все быстро, компетентно и что немаловажно на порядок дешевле, чем у отечественных специалистов. Рекомендую!
+							</p>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Максим Захожий</h3>
+								<p>Marketing director UAATEAM</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Заказываю услуги PriceGid уже не первый раз - надёжен, как щвейцарские часы. И в этот раз, так же не подвели. Вежливо, оперативно, своевременно. Всем рекомендую. Так держать!
+							</p>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Виталий Кравченко</h3>
+								<p>СУЩ Webline Promo</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Работаю с этой компанией не первый год. Все быстро, компетентно и что немаловажно на порядок дешевле, чем у отечественных специалистов. Рекомендую!
+							</p>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Максим Захожий</h3>
+								<p>Marketing director UAATEAM</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Заказываю услуги PriceGid уже не первый раз - надёжен, как щвейцарские часы. И в этот раз, так же не подвели. Вежливо, оперативно, своевременно. Всем рекомендую. Так держать!
+							</p>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Виталий Кравченко</h3>
+								<p>СУЩ Webline Promo</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Работаю с этой компанией не первый год. Все быстро, компетентно и что немаловажно на порядок дешевле, чем у отечественных специалистов. Рекомендую!
+							</p>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Максим Захожий</h3>
+								<p>Marketing director UAATEAM</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Заказываю услуги PriceGid уже не первый раз - надёжен, как щвейцарские часы. И в этот раз, так же не подвели. Вежливо, оперативно, своевременно. Всем рекомендую. Так держать!
+							</p>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Виталий Кравченко</h3>
+								<p>СУЩ Webline Promo</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Работаю с этой компанией не первый год. Все быстро, компетентно и что немаловажно на порядок дешевле, чем у отечественных специалистов. Рекомендую!
+							</p>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Максим Захожий</h3>
+								<p>Marketing director UAATEAM</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Заказываю услуги PriceGid уже не первый раз - надёжен, как щвейцарские часы. И в этот раз, так же не подвели. Вежливо, оперативно, своевременно. Всем рекомендую. Так держать!
+							</p>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="rewiew-author">
+							<img src="img/user-icon.svg" alt="">
+							<div class="rewiew-author-name">
+								<h3>Виталий Кравченко</h3>
+								<p>СУЩ Webline Promo</p>
+							</div>
+						</div>
+						<div class="rewiew-text">
+							<p>
+								Работаю с этой компанией не первый год. Все быстро, компетентно и что немаловажно на порядок дешевле, чем у отечественных специалистов. Рекомендую!
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<a href="#popup-form-review" class="reviews__send reviews__send-mob popup-with-move-anim reset-form">Оставить отзыв</a>
+			</div>
+		</section>
+		<section class="contact-to-us">
+			<div class="container contact-to-us__container">
+				<div class="contact-to-us__header-and-contacts">
+					<div class="contact-to-us__header">
+						<h2>Остались вопросы?</h2>
+						<p>
+							Остались вопросы, свяжитесь с нами прямо сейчас и мы ответим Вам в ближайшее время
+						</p>
+					</div>
+					<div class="contact-to-us__contacts">
+						<h3>Контакты:</h3>
+						<div class="contact-to-us__work-time">
+							<p>
+								Время работы  08:00 - 20:00, пн-пт
+							</p>
+						</div>
+						<div class="contact-to-us__phone">
+							<a href="tel:+74994541637">+7 (499) 454 16 37</a>
+							<a href="tel:+38044761341">+38 (044) 761 34 1</a>
+						</div>
+						<div class="contact-to-us__email">
+							<a href="mailto:info@pricegid.com">info@pricegid.com</a>
+						</div>
+					</div>
+					<div class="contact-to-us__links">
+						<h3>Всегда online:</h3>
+						<div class="contact-to-us__links-items">
+							<a href="https://t.me/pricegid" target="_blank"><img src="img/telegram.svg" alt=""></a>
+							<a href="https://wa.me/+380939500555" target="_blank"><img src="img/whatsapp.svg" alt=""></a>
+							<a href="viber://chat?number=+380939500555" target="_blank"><img src="img/viber.svg" alt=""></a>
+							<a href="skype:tesla_co?userinfo" target="_blank"><img src="img/skype.svg" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<img class="contact-to-us__img" src="img/questions.svg" alt="">
+				<form autocomplete="off" action="mail.php" method="POST" class="contact-to-us__form">
+					<div class="form__thanks">
+						<p>Спасибо!<br><span>Мы скоро с Вами свяжемся</span></p>
+					</div>
+					<div class="form__content-wrapper">
+						<h3>Напишите нам</h3>
+						<input name="fromWhere" type="text" class="data-input" value="Обратная связь">
+						<div class="input-wrap">
+							<input name="name" id="name" type="text" data-required placeholder="Имя*">
+							<label for="name"></label>
+							<span>Ведите имя</span>
+						</div>
+						<div class="input-wrap">
+							<input name="phone" id="phone" type="tel" data-required placeholder="Телефон*">
+							<label for="phone"></label>
+							<span>Введите телефон</span>
+						</div>
+						<div class="input-wrap">
+							<input name="email" id="email" type="text" data-required placeholder="Email*">
+							<span>Введите email</span>
+							<label for="email"></label>
+						</div>
+						<div class="input-wrap">
+							<textarea id="message" name="message" cols="30" rows="4" data-required placeholder="Сообщение*"></textarea>
+							<label for="message"></label>
+							<span>Заполните поле</span>
+						</div>
+						<button type="submit">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer>
+			<div class="container footer__container">
+				<div class="footer__about-info">
+					<div class="footer__logo">
+						<a href="#"><img src="img/logo-white.svg" alt=""></a>
+						<p>Сервис обновления<br>цен и наличия</p>
+					</div>
+					<p>
+						Ежедневное обновление цен и наличия на все товары в Вашем интернет-магазине, ежедневная актуализация всего каталога, ежедневная актуализация товарных остатков в интернет-магазине, всегда рыночные цены, или ниже рыночные цены (по желанию клиента). Мы поможем вообще не думать о ценообразовании, и всю эту рутину по отслеживанию остатков, цен, мониторинга поставщиков и конкурентов возьмём на себя.
+					</p>
+				</div>
+				<div class="footer__useful">
+					<nav class="footer__nav">
+						<ul>
+							<li><a href="info">О сервисе</a></li>
+							<li><a href="how-it-works">Как работаем</a></li>
+							<li><a href="tarrifs">Тарифы</a></li>
+							<li><a href="info">Наши услуги</a></li>
+							<li><a href="what-you-get">Что вы получите</a></li>
+							<li><a href="reviews">Отзывы</a></li>
+							<li><a href="our-clients">Для кого</a></li>
+							<li><a href="how-to-start">Как начать</a></li>
+							<li><a href="contact-to-us">Контакты</a></li>
+						</ul>
+					</nav>
+					<div class="footer__financial-data">
+						<div class="footer__legal-data">
+							<p>Юридические данные:</p>
+							<p>
+								ИП Гришко П.А. (без НДС), ИНН 9145670001003 от 20.05.2014, ОГРНИП 324560200001248 от 11.01.2017
+							</p>
+						</div>
+						<div class="footer__pay-ways desc-pw">
+							<p>Способы оплаты:</p>
+							<div>
+								<a href="#popup-yandex" class="popup-with-move-anim"><img src="img/yandex-money-icon-white.svg" alt=""></a>
+								<a href="#popup-mastercard" class="popup-with-move-anim"><img src="img/masterCardVisa-icon-white.svg" alt=""></a>
+								<a href="#popup-privat" class="popup-with-move-anim"><img src="img/privat24-icon-white.svg" alt=""></a>
+								<a href="#popup-online-pay" class="popup-with-move-anim"><img src="img/online-pay-icon-white.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="footer__pay-ways mob-pw">
+							<a href="#popup-yandex" class="popup-with-move-anim"><img src="img/umoneyYandex-icon-white.svg" alt=""></a>
+							<a href="#popup-mastercard" class="popup-with-move-anim"><img src="img/visa-icon-white.svg" alt=""></a>
+							<a href="#popup-mastercard" class="popup-with-move-anim"><img src="img/mastercard-icon-white.svg" alt=""></a>
+							<a href="#popup-privat" class="popup-with-move-anim"><img src="img/privat24-icon-white.svg" alt=""></a>
+							<a href="#popup-online-pay" class="popup-with-move-anim"><img src="img/online-pay-icon-white-full.svg" alt=""></a>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__line"></div>
+			<div class="footer__copyright">
+				<p>2014 - 2021, Сервис обновления цен и наличия по поставщикам и конкурентам © WebFixed.com</p>
+			</div>
+		</footer>
+	</div>
+	<!-- fonts -->
+	<link rel="stylesheet" href="css/fonts.css">
+	<!-- js -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
