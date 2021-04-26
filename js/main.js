@@ -115,7 +115,7 @@ $(function() {
 			howToStartCurrentSlide--
 			howToStartSliderNum()
 			$('.how-to-start__content .slick-prev').trigger('click')
-			setTimeout(() => howToStartSliderBlock = 1, 500)
+			setTimeout(() => howToStartSliderBlock = 1, 200)
 		}
 	})
 
@@ -125,7 +125,7 @@ $(function() {
 			howToStartCurrentSlide++
 			howToStartSliderNum()
 			$('.how-to-start__content .slick-next').trigger('click')
-			setTimeout(() => howToStartSliderBlock = 1, 500)
+			setTimeout(() => howToStartSliderBlock = 1, 200)
 		}
 	})
 
@@ -135,7 +135,7 @@ $(function() {
 			howToStartSliderBlock = 0
 			howToStartCurrentSlide = $(this).index() + 1
 			howToStartSliderNum()
-			setTimeout(() => howToStartSliderBlock = 1, 500)
+			setTimeout(() => howToStartSliderBlock = 1, 200)
 		}
 	});
 

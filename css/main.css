@@ -784,16 +784,7 @@ h1 span {
   position: relative;
 }
 .how-it-works__tab:hover {
-  background: #EAFCFF;
-}
-.how-it-works__tab:hover span:first-child {
-  color: #A05F83;
-}
-.how-it-works__tab:hover span:last-child {
-  color: #A05F83;
-}
-.how-it-works__tab:hover::after {
-  opacity: 1;
+  transform: translateX(20px);
 }
 .how-it-works__tab span {
   transition: all 0.3s ease;
@@ -1011,7 +1002,6 @@ h1 span {
   transition: all 0.3s ease;
 }
 .how-to-start__tab:hover {
-  color: #A05F83;
   background: #EAFCFF;
 }
 
@@ -2615,6 +2605,7 @@ footer {
   }
   .how-it-works__tab:hover {
     background: none;
+    transform: translateX(0);
   }
   .how-it-works__tab:hover span {
     color: #1E9EB0 !important;
@@ -2715,7 +2706,6 @@ footer {
     transition: all 0.3s ease;
   }
   .how-to-start__tab-mob:hover {
-    color: #A05F83;
     background: #EAFCFF;
   }
   .how-to-start__tab-mob.active {
